@@ -21,6 +21,7 @@ gitcommit = "git commit -m 'initial commit'"
 github_create_repo = "curl -u {0} https://api.github.com/user/repos -d \'{{\"name\" : \"{1}\"}}\'".format(user, repo)
 github_add_remote = "git remote add origin git@github.com:{0}/{1}.git".format(user, repo)
 gitpush = "git push --set-upstream origin master"
+gitstatus = "git status"
 
 os.system(gitinit)
 os.system(gitadd)
@@ -28,3 +29,4 @@ os.system(gitcommit)
 os.system(github_create_repo)
 os.system(github_add_remote)
 os.system(gitpush)
+os.system(gitstatus)
