@@ -1,4 +1,4 @@
-Script to automate initializing a git and github repo + initial commit
+Script to automate initializing a git and github repo including an initial initial commit
 
 Dependencies:
 * Python 2.7
@@ -12,7 +12,7 @@ Then, restart your shell.
 
 Default usage:
 ```
-gitcr
+gitcreate
 ```
 
 Options:
@@ -43,5 +43,8 @@ rm /usr/local/bin/gitcreate
 ```
 
 Get your Github access token for full automation!
+
+
 https://github.com/settings/tokens/new
+
 More info at https://help.github.com/articles/creating-an-access-token-for-command-line-use/
