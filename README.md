@@ -10,7 +10,12 @@ chmod +x /usr/local/bin/gitcreate           #make it executable
 ```
 Then, restart your shell.
 
-Usage:
+Default usage:
+```
+gitcr
+```
+
+Options:
 ```
 optional arguments:
   -h, --help                show help message and exit
@@ -30,6 +35,11 @@ access_token: os.environ['github_access_token']
 user: 'git config user.name'
 repo_name: current_path
 commit_message: 'Initial commit'
+```
+
+To remove (bash):
+```
+rm /usr/local/bin/gitcreate          
 ```
 
 Get your Github access token for full automation!
