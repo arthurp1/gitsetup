@@ -71,7 +71,7 @@ sysDebug(gitcommit)
 #Remote
 status_code = sysDebug(github_create_repo)
 if not status_code == 0:
-    debug('curl did not complete status code is: ' + str(2))
+    debug('curl did not finish successfully (with status code 0), instead the status code is: ' + str(status_code) + ' perhaps the os.system() documentation has some information on what it means')
     sys.exit()
 sysDebug(github_add_remote)
 sysDebug(gitpush)
