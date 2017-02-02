@@ -25,6 +25,6 @@ gitpush = "git push --set-upstream origin master"
 os.system(gitinit)
 os.system(gitadd)
 os.system(gitcommit)
-print(github_create_repo)
+os.system(github_create_repo)
 os.system(github_add_remote)
 os.system(gitpush)
