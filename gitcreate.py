@@ -25,18 +25,22 @@ class bcolors:
     UNDERLINE = '\033[4m'
 
 def removeNewline(text):
-	return text.replace(text[len(text)-1], "")
+    return text.replace(text[len(text)-1], "")
 
 def sysDebug(command):
-	print(bcolors.UNDERLINE + bcolors.OKGREEN + 'Working on: ' + command + bcolors.ENDC)
-	return os.system(command)
+    print(bcolors.UNDERLINE + bcolors.OKGREEN + 'Working on: ' + command + bcolors.ENDC)
+    return os.system(command)
 
 def debug(text):
-	print(bcolors.UNDERLINE + bcolors.FAIL + text + bcolors.ENDC)
+    print(bcolors.UNDERLINE + bcolors.FAIL + text + bcolors.ENDC)
 
 #Settings
 current_path = subprocess.check_output('pwd', shell = True)
-access_token = os.environ['github_access_token']
+try:
+    access_token = os.environ['github_access_token']    
+except Exception, e:
+    # debug('Exception thrown by setting current_path' + e)
+    access_token = None
 user = removeNewline(subprocess.check_output('git config user.name', shell = True))
 repo = removeNewline(ntpath.basename(current_path))
 
